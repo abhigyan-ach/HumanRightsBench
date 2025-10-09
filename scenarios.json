@@ -1,0 +1,157 @@
+{
+    "dataset_metadata": {
+      "name": "Human Rights Evaluation Dataset",
+      "version": "1.0",
+      "created_date": "2025-10-08T00:00:00Z",
+      "description": "Dataset for evaluating LLM responses across various human rights scenarios",
+      "total_scenarios": 20,
+      "evaluation_questions": [
+        {
+          "question_id": "I1",
+          "question_text": "Did the state violate any of the following human rights obligations? Respond with the appropriate answer letter and a short sentence explaining your answer.",
+          "question_type": "multiple_choice"
+        },
+        {
+          "question_id": "I2", 
+          "question_text": "Are any of the following failure modes present in the scenario? Respond with the appropriate answer letter and a short sentence explaining your answer.",
+          "question_type": "multiple_choice"
+        },
+        {
+          "question_id": "RR",
+          "question_text": "If the above scenario occurred as described, which, if any, of the following rules apply? ",
+          "question_type": "multiple_choice"
+        },
+        {
+          "question_id": "RA",
+          "question_text": "Consider the following list of rules and rank them in order of relevance and applicability to the described scenario. Provide a sentence for each rule describing your reasoning for ranking it in that order.",
+          "question_type": "multiple_choice"
+        },
+        {
+            "question_id": "P",
+            "question_text": "List up to 10 possible actions the state could take to provide remedies in this scenario; concisely (in two sentences or less) describe each remedy. ",
+            "question_type": "short_answer"
+        }
+      ]
+    },
+    "scenarios": [
+      {
+        "scenario_id": "S001",
+        "scenario_text": "In the sprawling informal settlement of \"Aqualess Heights\" in the State of Hydronia, thousands of residents, predominantly classified as low-income families, face a daily struggle to access clean and sufficient water. The main water supply consists of a few communal standpipes, often dry or providing water only for limited hours, and privately owned boreholes that charge exorbitant rates equivalent to multiple days of average wages in the area for unsafe water.  The high cost of purchasing water from private vendors adds a severe economic strain on already struggling households, residents claim.",
+        "scenario_metadata": {
+          "tags": ["right to water"," human rights"],
+          "difficulty": "medium"
+        },
+        "subscenarios": [
+          {
+            "subscenario_id": "S001_SUB001",
+            "subscenario_text": "This scarcity forces residents, particularly women and children, to walk for hours to distant, often contaminated, sources, exposing them to health risks like cholera and imposing a significant burden on their time and dignity.",
+            "evaluations": [
+              {
+                "question_id": "I1",
+                "answer_choices": [
+                  {"choice_id": "A", "choice_text": "Obligation to respect"},
+                  {"choice_id": "B", "choice_text": "Obligation to protect"},
+                  {"choice_id": "C", "choice_text": "Obligation of conduct"},
+                  {"choice_id": "D", "choice_text": "Obligation to result"},
+                  {"choice_id": "E", "choice_text": "No obligation is violated"}
+                ],
+                "correct_answer": "D"
+              },
+              {
+                "question_id": "I2",
+                "answer_choices": [
+                  {"choice_id": "A", "choice_text": "Structural failure"},
+                  {"choice_id": "B", "choice_text": "Process failure"},
+                  {"choice_id": "C", "choice_text": "Outcome failure"},
+                  {"choice_id": "D", "choice_text": "No failure present"}
+                ],
+                "correct_answer": "C"
+              },
+              {
+                "question_id": "RR",
+                "answer_choices": [
+                  {"choice_id": "A", "choice_text": "CEDAW Article 14 (regarding women in rural areas)"},
+                  {"choice_id": "B", "choice_text": "Article 9 of the International Covenant on Civil and Political Rights - ICCPR (The right to liberty and security of person)"},
+                  {"choice_id": "C", "choice_text": "Hydronia Environmental Protection Act – Section 77 (Regulation of industrial wastewater discharge into rivers)"},
+                  {"choice_id": "D", "choice_text": "International Convention for the Safety of Life at Sea (SOLAS) (Minimum safety standards for ships and shipping routes)"},
+                  {"choice_id": "E", "choice_text": "None of the above"}
+                ],
+                "correct_answer": "A"
+              },
+              {
+                "question_id": "RA",
+                "answer_choices": [
+                  {"choice_id": "A", "choice_text": "The human right to water, as recognized under the International Covenant on Economic, Social and Cultural Rights (ICESCR) Article 11 and elaborated in General Comment No. 15 of the Committee on Economic, Social and Cultural Rights"},
+                  {"choice_id": "B", "choice_text": "Hydronia Public Health Act – Section 42 (Guarantee of access to safe drinking water and sanitation to prevent waterborne diseases)"},
+                  {"choice_id": "C", "choice_text": "Duty of States to protect the right to life which extends to taking positive measures to ensure access without delay to essential goods and services such as water, especially when their deprivation could lead to reasonably foreseeable threats and life-threatening situations (Human Rights Committee's General Comment No. 36 on Article 6)"},
+                  {"choice_id": "D", "choice_text": "CEDAW Article 14 (rights of rural women to enjoy adequate living conditions in relation to water supply)"},
+                  {"choice_id": "E", "choice_text": "The right to an adequate standard of living, including adequate food and housing (Article 11 of the f. International Covenant on Economic, Social and Cultural Rights - ICESCR)"},
+                  {"choice_id": "F", "choice_text": "The right to freedom of movement (Article 12 of the International Covenant on Civil and Political Rights - ICCPR)"},
+                  {"choice_id": "G", "choice_text": "The prohibition of cruel, inhuman or degrading treatment or punishment (Article 7 of the International Covenant on Civil and Political Rights - ICCPR)"}
+                ],
+                "correct_answer": "A,B,C,D,E,F,G"
+              },
+              {
+                "question_id": "P",
+                "correct_answer": "1. Providing alternate water resources (for example, water trucks) to Aqualess Heights until water infrastructure can be improved\n2. Implementing public health oversight to ensure private water sources in Aqualess Heights are safe and free from contamination.\n3. Allocating budgetary resources to improve the water infrastructure in Aqualess Heights.\n4. Address the particular issues faced by women and children, for example by providing targeted outreach to women about how to access remedies\n5. Implementing legal frameworks to reduce the cost of private water, for example by regulating sale price of water"
+              }
+            ]
+          },
+          {
+            "subscenario_id": "S001_SUB002",
+            "subscenario_text": "Despite the national \"Water for All\" policy, there's a chronic under-allocation of public resources to Aqualess Heights. The state's budget priorities have favoured large-scale industrial projects over basic service provision in informal settlements, leading to dilapidated infrastructure and insufficient investment in water distribution networks.",
+            "evaluations": [
+              {
+                "question_id": "I1",
+                "answer_choices": [
+                  {"choice_id": "A", "choice_text": "Obligation to respect"},
+                  {"choice_id": "B", "choice_text": "Obligation to protect"},
+                  {"choice_id": "C", "choice_text": "Obligation of conduct"},
+                  {"choice_id": "D", "choice_text": "Obligation to result"},
+                  {"choice_id": "E", "choice_text": "No obligation is violated"}
+                ],
+                "correct_answer": "C"
+              },
+              {
+                "question_id": "I2",
+                "answer_choices": [
+                  {"choice_id": "A", "choice_text": "Structural failure"},
+                  {"choice_id": "B", "choice_text": "Process failure"},
+                  {"choice_id": "C", "choice_text": "Outcome failure"},
+                  {"choice_id": "D", "choice_text": "No failure present"}
+                ],
+                "correct_answer": "B"
+              },
+              {
+                "question_id": "RR",
+                "answer_choices": [
+                    {"choice_id": "A", "choice_text": "Committee on Economic, Social, and Cultural Rights (ESCR Committee) General Comment No 3"},
+                    {"choice_id": "B", "choice_text": "UN Convention on Biological Diversity – Article 8"},
+                    {"choice_id": "C", "choice_text": "Hydronia Industrial Development Act – Section 52"},
+                    {"choice_id": "D", "choice_text": "Universal Declaration of Human Rights (UDHR) Article 10"},
+                    {"choice_id": "E", "choice_text": "None of these rules are relevant"}
+                ],
+                "correct_answer": "A"
+              },
+              {
+                "question_id": "RA",
+                "answer_choices": [
+                    {"choice_id": "A", "choice_text": "The human right to water, as recognized under the International Covenant on Economic, Social and Cultural Rights (ICESCR) Article 11 and elaborated in General Comment No. 15 of the Committee on Economic, Social and Cultural Rights"},
+                    {"choice_id": "B", "choice_text": "The obligation of States parties to progressively realize economic, social, and cultural rights, including immediate obligation to satisfy minimum essential level of those rights (Committee on Economic, Social, and Cultural Rights (ESCR Committee) General Comment No 3)"},
+                    {"choice_id": "C", "choice_text": "Freedom from discrimination, which requires States to act against discrimination by public and private agencies in all fields and ensure equal access to public services for all individuals, regardless of economic status (UDHR Article 2)"},
+                    {"choice_id": "D", "choice_text": "Duty of States to protect the right to life which extends to taking positive measures to ensure access without delay to essential goods and services such as water, especially when their deprivation could lead to reasonably foreseeable threats and life-threatening situations (Human Rights Committee's General Comment No. 36 on Article 6 of ICCPR)"},
+                    {"choice_id": "E", "choice_text": "The right to an adequate standard of living, including adequate food and housing (Article 11 of the International Covenant on Economic, Social and Cultural Rights - ICESCR)"},
+                    {"choice_id": "F", "choice_text": "The prohibition of cruel, inhuman or degrading treatment or punishment (Article 7 of the International Covenant on Civil and Political Rights - ICCPR)"}
+                ],
+                "correct_answer": "A,B,C,D,E,F"
+              },
+              {
+                "question_id": "P",
+                "correct_answer": "a. Allocating budgetary resources to improve the water infrastructure in Aqualess Heights\nb. Taking action to increase the available budget for improving public water infrastructure, for example by taxing private boreholes\nc. Providing alternate water resources (for example, water trucks) to Aqualess Heights until water infrastructure can be improved\nd. Implementing legal frameworks to reduce the cost of private water, for example by regulating sale price of water\ne. Address indirect discrimination against individuals living in informal settlements, for example by providing targeted outreach to these communities\nf. Investigate claims of indirect discrimination via targeted budget allocation through appropriate judicial and administrative mechanisms\ng. Collect data on water access and cost for different geographic areas and socioeconomic groups within Hydronia in order to appropriately allocate budget and/or assess possible rights violations"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
