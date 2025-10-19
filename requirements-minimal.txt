@@ -1,0 +1,25 @@
+# Core dependencies for Human Rights Benchmark Evaluation Tool
+# Python 3.9+
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# LLM APIs
+openai>=1.0.0
+anthropic>=0.21.0
+google-generativeai>=0.3.0
+
+# Data Validation and Parsing
+pydantic>=2.0.0
+
+# JSON Processing (built-in, but listing for completeness)
+# json (standard library)
+
+# Command Line Arguments (built-in)
+# argparse (standard library)
+
+# Optional: For enhanced functionality
+# jupyter>=1.0.0  # If you want to run notebooks
+# requests>=2.31.0  # For HTTP requests
+
